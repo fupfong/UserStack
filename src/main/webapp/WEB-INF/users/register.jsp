@@ -237,6 +237,13 @@
                 </div>
             </form>
 
+            <% String registerMsg=(String) request.getAttribute("message"); if (registerMsg==null) registerMsg=(String)
+                session.getAttribute("message"); if (registerMsg !=null && !registerMsg.isEmpty()) { %>
+                <p class="message-block">
+                    <%= registerMsg %>
+                </p>
+                <% } %>
+
             <hr class="swiss-divider">
 
             <section class="info-block" aria-label="安全性聲明">
@@ -245,12 +252,7 @@
                 <p>任何人（包含系統管理員）皆無法反推您的原始明文密碼，有效抵禦 Rainbow Table 攻擊。</p>
             </section>
 
-            <% String registerMsg=(String) request.getAttribute("message"); if (registerMsg==null) registerMsg=(String)
-                session.getAttribute("message"); if (registerMsg !=null && !registerMsg.isEmpty()) { %>
-                <p class="message-block">
-                    <%= registerMsg %>
-                </p>
-                <% } %>
+            
 
                     <hr class="swiss-divider">
 

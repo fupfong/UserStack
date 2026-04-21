@@ -238,6 +238,13 @@
                 </div>
             </form>
 
+            <% String loginMsg=(String) request.getAttribute("message"); if (loginMsg==null) loginMsg=(String)
+                session.getAttribute("message"); if (loginMsg !=null && !loginMsg.isEmpty()) { %>
+                <p class="message-block" id="login-message">
+                    <%= loginMsg %>
+                </p>
+                <% } %>
+
             <hr class="swiss-divider">
 
             <section class="info-block" aria-label="Session 與 Cookie 說明">
@@ -246,12 +253,7 @@
                 <p>並透過 <strong>HttpOnly Cookie</strong> 儲存會話識別碼，有效防止 XSS 攻擊並保障會員的隱私。</p>
             </section>
 
-            <% String loginMsg=(String) request.getAttribute("message"); if (loginMsg==null) loginMsg=(String)
-                session.getAttribute("message"); if (loginMsg !=null && !loginMsg.isEmpty()) { %>
-                <p class="message-block" id="login-message">
-                    <%= loginMsg %>
-                </p>
-                <% } %>
+            
 
                     <hr class="swiss-divider">
 
