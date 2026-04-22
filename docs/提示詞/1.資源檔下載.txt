@@ -1,8 +1,0 @@
-專案環境配置說明：
-於專案中下載 Bootstrap 5.3 (完整版) 與 Vue 3.0 (JavaScript 版)。
-
-相關靜態資源請依類別存放至 webapp 目錄下的指定路徑：
-
-CSS 檔案： 放置於 src\main\webapp\static\lib\css
-
-JS 檔案： 放置於 src\main\webapp\static\lib\js
